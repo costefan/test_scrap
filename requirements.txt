@@ -1,0 +1,10 @@
+# aio
+aiohttp==2.3.10
+aiohttp-swagger==1.0.5
+
+# parse sugar
+beautifulsoup4==4.6.3
+pandas==0.22.0
+
+# helpers
+python-dotenv==0.7.1

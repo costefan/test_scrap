@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Scrapper app
+
+
+tags:
+  - name: scrap
+    description: Everything about application
+
+paths:
+  /:
+    get:
+      tags:
+        - scrap
+      description: Search by scrapped data
+      summary: Returns scrapped bulk
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          description: string parameter that will filter by game name
+          required: false
+
+  /scrap/:
+    post:
+      tags:
+        - scrap
+      description: Start scrapping items
+      summary: Returns scrapped items
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: "#/definitions/StartScrapItem"
+          required: true
+
+  /export/:
+    get:
+      tags:
+        - scrap
+      description: Get scrapped csv
+      summary: Returns csv file
+
+
+definitions:
+  StartScrapItem:
+    type: object
+    properties:
+      url:
+        type: string
+        description: scrapping url
+        example: "https://play.google.com/store/apps/category/GAME"
