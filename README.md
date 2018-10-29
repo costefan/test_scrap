@@ -17,3 +17,8 @@ localhost:8000/api/doc
 ## Improvements
 * Search by part of name, catefory (text search)
 * Cache by parts (for ex by categories to file)
+
+
+## Flow
+* you start application
+* run swagger on it's url and use examples, or use Postman to send http requests
