@@ -1,3 +1,7 @@
+## Should be installed 
+* Docker
+* Docker-compose
+
 ## TO START APPLICATION
 * $ make build
 * $ make migrate
